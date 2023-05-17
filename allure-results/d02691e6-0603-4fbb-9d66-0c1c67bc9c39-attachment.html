@@ -1,0 +1,26 @@
+<div>DELETE to http://localhost:8081/loan-service/deleteOrder</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;userId&quot;: 987654,
+    &quot;orderId&quot;: &quot;8b4ad143-50f0-4857-b37e-4d0011980b7b&quot;
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X DELETE &#39;http://localhost:8081/loan-service/deleteOrder&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;userId&quot;: 987654,
+    &quot;orderId&quot;: &quot;8b4ad143-50f0-4857-b37e-4d0011980b7b&quot;
+}&#39;
+</div>

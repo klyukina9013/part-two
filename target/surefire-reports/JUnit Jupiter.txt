@@ -1,0 +1,46 @@
+-------------------------------------------------------------------------------
+Test set: JUnit Jupiter
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in JUnit Jupiter
+JUnit Jupiter.JUnit Jupiter  Time elapsed: 0 s  <<< ERROR!
+org.junit.platform.commons.JUnitException: TestEngine with ID 'junit-jupiter' failed to execute tests
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:113)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.lambda$execute$1(JUnitPlatformProvider.java:234)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:228)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:131)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+Caused by: org.junit.platform.commons.JUnitException: Error executing tests for engine junit-jupiter
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:57)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	... 17 more
+Caused by: org.junit.platform.commons.JUnitException: Failed to transform configuration parameter with key 'junit.jupiter.execution.parallel.config.dynamic.factor' and initial value 'true'
+	at org.junit.platform.engine.ConfigurationParameters.lambda$get$0(ConfigurationParameters.java:129)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.junit.platform.engine.ConfigurationParameters.get(ConfigurationParameters.java:122)
+	at org.junit.platform.engine.support.config.PrefixedConfigurationParameters.get(PrefixedConfigurationParameters.java:61)
+	at org.junit.platform.engine.support.hierarchical.DefaultParallelExecutionConfigurationStrategy$2.createConfiguration(DefaultParallelExecutionConfigurationStrategy.java:64)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.createConfiguration(ForkJoinPoolHierarchicalTestExecutorService.java:82)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.<init>(ForkJoinPoolHierarchicalTestExecutorService.java:63)
+	at org.junit.jupiter.engine.JupiterTestEngine.createExecutorService(JupiterTestEngine.java:78)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:50)
+	... 18 more
+Caused by: java.lang.NumberFormatException: Character t is neither a decimal digit number, decimal point, nor "e" notation exponential mark.
+	at java.base/java.math.BigDecimal.<init>(BigDecimal.java:594)
+	at java.base/java.math.BigDecimal.<init>(BigDecimal.java:483)
+	at java.base/java.math.BigDecimal.<init>(BigDecimal.java:889)
+	at org.junit.platform.engine.ConfigurationParameters.lambda$get$0(ConfigurationParameters.java:124)
+	... 26 more
+

@@ -1,0 +1,21 @@
+version: '3.3'
+
+volumes:
+  pgdata-app:
+
+services:
+
+  banking-process:
+    container_name: credit_processing_db_v9
+    image: postgres:13.1-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata-app:/var/lib/postgresql/data
+    networks:
+      - default
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: credit_processing_db
