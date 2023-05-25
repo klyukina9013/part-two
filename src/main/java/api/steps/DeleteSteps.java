@@ -19,9 +19,23 @@ public class DeleteSteps {
                 .body(delete)
                 .delete("deleteOrder")
                 .then()
+                .spec(SpecHelper.getResponseSpec(200))
+                .extract()
+                .response();
+    }
+
+    @Step("Отправить запрос DELETE http://localhost:8081/loan-service/deleteOrder")
+    public static Response deleteApplyUnsuccessful(DeleteOrderRequest delete){
+        return given()
+                .spec(SpecHelper.getRequestSpec())
+                .when()
+                .body(delete)
+                .delete("deleteOrder")
+                .then()
                 .spec(SpecHelper.getResponseSpec(400))
                 .extract()
                 .response();
+
     }
 
     @Step("Проверка статуса кода запроса")

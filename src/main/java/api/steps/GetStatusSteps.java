@@ -1,12 +1,10 @@
 package api.steps;
 
-import api.constant.ErrorCode;
 import api.constant.OrderStatus;
 import api.model.Error;
 import api.model.GetStatusOrder;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
-
 import static io.restassured.RestAssured.given;
 
 public class GetStatusSteps {
