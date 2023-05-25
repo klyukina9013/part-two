@@ -4,7 +4,6 @@ import api.model.CreateOrderRequest;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
-
 import static io.restassured.RestAssured.given;
 
 public class PostSteps {
